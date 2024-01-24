@@ -1,0 +1,16 @@
+﻿<Window x:Class="HelloWPF.LayoutDock"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HelloWPF"
+        mc:Ignorable="d"
+        Title="LayoutDock" Height="450" Width="400">
+    <DockPanel>
+        <Button DockPanel.Dock="Top" >Botão superior</Button>
+        <Button DockPanel.Dock="Bottom" >Botão inferior</Button>
+        <Button DockPanel.Dock="Left" >Botão Esquerdo</Button>
+        <Button DockPanel.Dock="Right" >Botão Direito</Button>
+        <Button>Botão Do centro</Button>
+    </DockPanel>
+</Window>

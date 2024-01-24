@@ -1,0 +1,27 @@
+﻿<Window x:Class="HelloWPF.Bindings" DataContext="{RelativeSource Self}"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HelloWPF"
+        mc:Ignorable="d"
+        Title="Bindings" Height="480" Width="800">
+    <StackPanel>
+        
+        <!-- Exemplo simples de Binding usando a própria janela -->
+        <TextBlock>Título da janela:</TextBlock>
+        <TextBox Text="{Binding Title, UpdateSourceTrigger=PropertyChanged}" />
+        <TextBlock>Lagura da janela:</TextBlock>
+        <TextBox Text="{Binding Width, UpdateSourceTrigger=PropertyChanged}" />
+        <TextBlock>Altura da janela:</TextBlock>
+        <TextBox Text="{Binding Height, UpdateSourceTrigger=PropertyChanged}" />
+
+        <!-- Como o binding pode ser usado no código -->
+        <TextBlock Margin="0, 30, 0, 0" >Digite algo aqui:</TextBlock>
+        <TextBox Name="txtValor"/>
+        <TextBlock Name="lblValor">...</TextBlock>
+        <Button Click="btnAtivarBinding_Click">Ativar binding</Button>
+        <Button Click="btnDesligarBinding_Click">Desligar binding</Button>
+
+    </StackPanel>
+</Window>

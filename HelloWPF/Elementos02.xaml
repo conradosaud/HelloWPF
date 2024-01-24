@@ -1,0 +1,40 @@
+﻿<Window x:Class="HelloWPF.Elementos02"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HelloWPF"
+        mc:Ignorable="d"
+        Title="Elementos02" Height="450" Width="800">
+    <StackPanel>
+        
+        <Button> Botão simples e imenso </Button>
+        <Button HorizontalAlignment="Left" > Adaptações do botão </Button>
+        <Button HorizontalAlignment="Left" Background="Red" Foreground="White" Padding="10" BorderBrush="Blue" BorderThickness="4" >Botão diferente</Button>
+
+        <!-- Eventos no WPF -->
+        <Button Click="MostrarMensagem_Click" Margin="10" HorizontalAlignment="Left" >Mostrar mensagem</Button>
+        <Button MouseEnter="MostrarMensagem_MouseEnter" Margin="10" HorizontalAlignment="Left" >Mostrar mensagem</Button>
+        <!-- Sugestão de atividade: juntar os dois comandos no msm botão -->
+
+        <!-- Formulários -->
+        <TextBox />
+        <!-- Controle de tamanho do TextBox -->
+        <TextBox HorizontalAlignment="Left" Width="150" Height="25" />
+        <!-- Multilinhas -->
+        <TextBox AcceptsReturn="True" TextWrapping="Wrap"/>
+        <TextBox AcceptsReturn="True" TextWrapping="Wrap" HorizontalAlignment="Left" Width="150" Height="50"/>
+
+        <!-- Labels com formulários -->
+        <Label>Olár</Label>
+        <!-- Linkando label com TextBox -->
+        <Label Content="Digite seu nome:"/>
+        <TextBox Name="txtName"/>
+        <Button Click="SalvarNome_Click" Content="Salvar"/>
+        <CheckBox>Marque este checkbox</CheckBox>
+        <Label Content="Você está gostando de WPF?"/>
+        <RadioButton GroupName="gostandoWPF">Sim</RadioButton>
+        <RadioButton GroupName="gostandoWPF">Não</RadioButton>
+
+    </StackPanel>
+</Window>

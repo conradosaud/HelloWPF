@@ -1,0 +1,51 @@
+﻿<Window x:Class="HelloWPF.Atividade02"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HelloWPF"
+        mc:Ignorable="d"
+        Title="Atividade02" Height="900" Width="800">
+    <StackPanel>
+
+        <TextBlock Name="lblTitulo" TextAlignment="Center" FontSize="18" Padding="10" Margin="0, 0, 0, 20" >Conecte-se para acessar o sistema</TextBlock>
+
+        <StackPanel Name="panelLogin" Visibility="Visible">
+            <Label>Digite o usuário</Label>
+            <TextBox Name="txtUsuario" />
+            <TextBlock Name="lblErroUsuario" Foreground="Red" Visibility="Collapsed">Usuário incorreto</TextBlock>
+            <Label>Digite a senha</Label>
+            <PasswordBox Name="txtSenha" />
+            <TextBlock Name="lblErroSenha" Foreground="Red" Visibility="Collapsed">Senha incorreta</TextBlock>
+            <CheckBox Name="cboxLembrese" Click="cboxLembrese_Click" Margin="0, 10, 0, 10" >Lembre-se de mim</CheckBox>
+            <Button Name="btnConectar" Click="btnConectar_Click" Margin="0,10,0,0">Conectar</Button>
+        </StackPanel>
+
+
+        <StackPanel Name="panelDashboard" Visibility="Visible">
+            
+            <TextBlock HorizontalAlignment="Right" FontSize="10">Você está conectado como: <Span FontWeight="Bold">conradito</Span></TextBlock>
+            <Button Click="btnSair_Click" HorizontalAlignment="Right">Sair</Button>
+
+            <TextBlock FontSize="14" TextDecorations="Underline" Background="#EEE" Margin="0,15,0,5">Dados cadastrais</TextBlock>
+            <TextBlock>Nome: <Span FontWeight="SemiBold"><Run Name="runNome"></Run></Span></TextBlock>
+            <TextBlock>Tipo de conta: <Span FontWeight="SemiBold"><Run Name="runConta">Corrente</Run></Span></TextBlock>
+
+            <Button Name="btnAlterarDados" Click="btnAlterarDados_Click" HorizontalAlignment="Left" Margin="0,10,0,0">Alterar dados</Button>
+            
+            <StackPanel Name="panelAlterarDados" Visibility="Collapsed">
+                <TextBlock FontSize="14" TextDecorations="Underline" Background="#FFFFF29D" Margin="0,15,0,5">Alterar dados</TextBlock>
+                <Label>Digite o novo nome:</Label>
+                <TextBox Name="txtNome" />
+                <Label>Alterar conta:</Label>
+                <RadioButton Name="radioCorrente" GroupName="tipoConta">Corrente</RadioButton>
+                <RadioButton Name="radioPoupanca"  GroupName="tipoConta">Poupança</RadioButton>
+                <Button Click="btnSalvarAlteracoes_Click" HorizontalAlignment="Left" Background="#FFADDAAA" Margin="0,10,0,10">Salvar alterações</Button>
+                <Button Click="btnCancelarAlteracoes_Click" HorizontalAlignment="Left" Background="#FFDAA6A6" >Cancelar</Button>
+            </StackPanel>
+            
+
+        </StackPanel>
+        
+    </StackPanel>
+</Window>

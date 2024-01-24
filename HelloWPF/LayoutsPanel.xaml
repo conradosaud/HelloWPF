@@ -1,0 +1,54 @@
+﻿<Window x:Class="HelloWPF.LayoutsPanel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HelloWPF"
+        mc:Ignorable="d"
+        Title="LayoutsPanel" Height="450" Width="400">
+    <StackPanel>
+        
+        <Button>Alinhamento Vertical</Button>
+        <Button>Alinhamento Vertical</Button>
+        <Button>Alinhamento Vertical</Button>
+        
+        <StackPanel Orientation="Horizontal" >
+            <Button>Horizontal</Button>
+            <Button>Horizontal</Button>
+            <Button>Horizontal</Button>
+            <Button>Horizontal</Button>
+            <Button>Horizontal</Button>
+            <Button>Horizontal</Button>
+
+            <StackPanel Orientation="Vertical" >
+                <Button>Vertical</Button>
+                <Button>Vertical</Button>
+                <Button>Vertical</Button>
+            </StackPanel>
+
+            <Button>Horizontal</Button>
+
+        </StackPanel>
+
+        <!-- A diferença é queo WRAP envia o conteúdo para a próxima linha se não couber -->
+        <WrapPanel Margin="0, 20,0,0">
+            <Button>Wrap Horizontal</Button>
+            <Button>Wrap Horizontal</Button>
+            <WrapPanel Orientation="Vertical">
+                <Button>Wrap Vertical</Button>
+                <Button>Wrap Vertical</Button>
+                <Button>Wrap Vertical</Button>
+            </WrapPanel>
+            <Button>Wrap Horizontal</Button>
+            <Button>Wrap Horizontal</Button>
+            <Button>Wrap Horizontal</Button>
+        </WrapPanel>
+        
+        <WrapPanel Orientation="Vertical">
+            <Button>Wrap Vertical</Button>
+            <Button>Wrap Vertical</Button>
+            <Button>Wrap Vertical</Button>
+        </WrapPanel>
+        
+    </StackPanel>
+</Window>

@@ -1,0 +1,152 @@
+﻿<Window x:Class="HelloWPF.Atividade03"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HelloWPF"
+        mc:Ignorable="d"
+        Title="Atividade03" Height="450" Width="600">
+    
+    <!-- Programa de Streaming tipo NETFLIX -->
+    
+    <DockPanel> <!-- Recomendável sempre Dock para paineis fixos -->
+        
+        <!-- Layout Grid para separar cada um em uma extremidade -->
+        <!-- Dock="Top" para manter sempre no topo esse menu -->
+        <Grid DockPanel.Dock="Top" VerticalAlignment="Top" Background="Red" >
+            
+            <!-- Definição da GRID -->
+            <Grid.ColumnDefinitions> <!-- 2 colunas (esquerda e direita) -->
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions> <!-- 1 linha -->
+                <RowDefinition Height="30" />
+            </Grid.RowDefinitions>
+
+            <!-- Conteúdo da GRID -->
+            
+            <!-- Logo -->
+            <!-- Imagens locais: lembrar de alterar as propriedades -->
+            <Image Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Source="Imagens/LogoNetflix.png" />
+            <!-- Opções do menu direito -->
+            <!-- Usando StackPanel horizontal para que fiquem alinhados -->
+            <StackPanel Grid.Row="0" VerticalAlignment="Center" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" >
+                
+                <!-- Style para definir uma margem para todos botões de uma só vez -->
+                <StackPanel.Resources>
+                    <Style TargetType="Button">
+                        <Setter Property="Margin" Value="5, 0" />
+                    </Style>
+                </StackPanel.Resources>
+                
+                <TextBox Width="100"/>
+                <Button Background="Transparent" BorderThickness="0" Width="20">
+                    <Image Source="/Imagens/Lupa.png" />
+                </Button>
+                <Button>Entrar</Button>
+                <Button>Cadastrar</Button>   
+                
+            </StackPanel>
+            
+        </Grid>
+
+        <!-- Menu esquerdo, usando Dock Left para manter sempre a esquerda -->
+        <StackPanel DockPanel.Dock="Left" HorizontalAlignment="Left" Background="Green" >
+            
+            <!-- Estilo padronizado dos botões -->
+            <StackPanel.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="Margin" Value="10"/>
+                </Style>
+            </StackPanel.Resources>
+            
+            <Button>Início</Button>
+            <Button>Filmes</Button>
+            <Button>Séries</Button>
+            <Button>Meus favoritos</Button>
+            
+        </StackPanel>
+
+        <!-- Conteúdo principal com todos os filmes -->
+        <StackPanel Margin="10, 20">
+            
+            <TextBlock Margin="0, 0, 0, 10">Filmes recomendados:</TextBlock>
+
+            <!-- Catálogo de filmes recomendados com scroll horizontal -->
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Hidden">
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel.Resources>
+                        <Style TargetType="Image">
+                            <Setter Property="Height" Value="60" />
+                            <Setter Property="Width" Value="100" />
+                            <Setter Property="Margin" Value="5" />
+                        </Style>
+                    </StackPanel.Resources>
+
+                    <Image Source="Imagens/Naruto.jpg" Stretch="UniformToFill" />
+                    <Image Source="https://via.placeholder.com/100x60" />
+                    <Image Source="https://via.placeholder.com/100x60" />
+                    <Image Source="https://via.placeholder.com/100x60" />
+                    <Image Source="https://via.placeholder.com/100x60" />
+
+                </StackPanel>
+            </ScrollViewer>
+
+            <TextBlock Margin="0, 20, 0, 10">Todos os filmes:</TextBlock>
+
+            <!-- Todos os filmes organizado em uma grade, como um mosaico -->
+            <!-- Usamos GRID para falar exatamente o tamanho de cada linha e coluna -->
+            <WrapPanel HorizontalAlignment="Left">
+
+                <WrapPanel.Resources>
+                    <Style TargetType="Grid">
+                        <Setter Property="Margin" Value="10"/>
+                    </Style>
+                </WrapPanel.Resources>
+                
+                <Grid Width="auto">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="200"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <Image Grid.Column="0" Margin="0,0,10,0" Source="https://via.placeholder.com/100" />
+                    <StackPanel Grid.Column="1">
+                        <TextBlock FontWeight="Bold">Naruto Shipppuden</TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="8" Margin="0, 5">Naruto Shippuden segue a jornada de Naruto Uzumaki em busca de reconhecimento enquanto enfrenta desafios ninja e ameaças poderosas.</TextBlock>
+                        <Button Content="Assistir"/>
+                    </StackPanel>
+
+                </Grid>
+
+                <Grid Width="auto">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="200"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <Image Grid.Column="0" Margin="0,0,10,0" Source="https://via.placeholder.com/100" />
+                    <StackPanel Grid.Column="1">
+                        <TextBlock FontWeight="Bold">Naruto Shipppuden</TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="8" Margin="0, 5">Naruto Shippuden segue a jornada de Naruto Uzumaki em busca de reconhecimento enquanto enfrenta desafios ninja e ameaças poderosas.</TextBlock>
+                        <Button Content="Assistir"/>
+                    </StackPanel>
+
+                </Grid>
+
+
+            </WrapPanel>
+            
+        </StackPanel>
+        
+    </DockPanel>
+</Window>

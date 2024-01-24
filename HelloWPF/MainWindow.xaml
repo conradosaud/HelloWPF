@@ -1,0 +1,65 @@
+﻿<Window x:Class="HelloWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HelloWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="650" Width="300">
+    <StackPanel>
+        
+        <TextBlock>Olá, mundo!</TextBlock>
+        
+        <!-- Formatação simples -->
+        <TextBlock Foreground="Red">Mudando a cor do texto</TextBlock>
+        <TextBlock Foreground="Blue">Texto azul</TextBlock>
+        <TextBlock Foreground="#CCC">Texto azul</TextBlock>
+        <TextBlock FontWeight="Bold">Negrito</TextBlock>
+        <TextBlock FontStyle="Italic">Itálico</TextBlock>
+        <TextBlock TextDecorations="Underline">Sublinhado</TextBlock>
+        <TextBlock FontSize="18"> Texto maior </TextBlock>
+        <TextBlock FontSize="10"> Texto menor</TextBlock>
+        
+        <!-- Junção de propriedades -->
+        <TextBlock Background="Red">Mudar cor de fundo</TextBlock>
+        <TextBlock Background="Black" Foreground="White" >Mudar fundo e a letra</TextBlock>
+
+        <!-- Junção de estilos com SPAN -->
+        <TextBlock> Uma parte <Span Foreground="red">Vermelha</Span></TextBlock>
+        <TextBlock> Texto <Span Foreground="red">Multi</Span><Span Foreground="Blue">colorido</Span></TextBlock>
+        <TextBlock> 
+            <Span FontWeight="ExtraBold">Tudo</Span>
+            <Span FontStyle="Italic">junto</Span>
+            <Span TextDecorations="Underline">em</Span>
+            <Span Foreground="Red">um</Span>
+            <Span Foreground="Blue">texto</Span>
+            <Span Background="#CCC">só</Span>
+        </TextBlock>
+        
+        <!-- Alternativas para formatação de texto -->
+        <TextBlock> Dá pra <Bold>fazer</Bold> <Italic>assim</Italic> <Underline>também</Underline></TextBlock>
+
+        <!-- Espaçamentos com MARGEM -->
+        <TextBlock Margin="50,0,0,0" >Descolado da esquerda</TextBlock>
+        <TextBlock Margin="0,10,0,0" >Descolado de cima</TextBlock>
+        <TextBlock Margin="20" >Descolado de todos os lados</TextBlock>
+
+        <!-- Espaçamentos com PADDING -->
+        <TextBlock Background="Red">Texto normal com fundo vermelho</TextBlock>
+        <TextBlock Background="Red" Margin="5">Margem não resolve</TextBlock>
+        <TextBlock Background="Red" Padding="10">Mas o padding, sim, resolve</TextBlock>
+        <TextBlock Background="Red" Padding="50, 10, 50, 10" Margin="0, 10">Margin é o espaço por fora, Padding é o espaço por dentro</TextBlock>
+
+        <!-- Alinhamento de texto -->
+        <TextBlock> Por padrão, todo texto é alinhado à esquerda </TextBlock>
+        <TextBlock HorizontalAlignment="Center" > É possível alinhar ao centro </TextBlock>
+        <TextBlock HorizontalAlignment="Right" > E a direita</TextBlock>
+
+        <!-- Ajuste de texto (reduzir Width para 300 para testes) -->
+        <TextBlock> Este é um texto médio. Então ele será cortado pelo cumprimento que você desejar.</TextBlock>
+        <TextBlock TextTrimming="CharacterEllipsis" > Este é um texto médio. Então ele será cortado pelo cumprimento que você desejar.</TextBlock>
+        <TextBlock TextWrapping="Wrap" > Este é um texto médio. Então ele será cortado pelo cumprimento que você desejar.</TextBlock>
+        <TextBlock TextWrapping="Wrap" > Este é um texto médio. <LineBreak/> Então ele será cortado pelo cumprimento que você desejar.</TextBlock>
+
+    </StackPanel>
+</Window>
