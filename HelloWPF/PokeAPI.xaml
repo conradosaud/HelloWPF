@@ -1,0 +1,56 @@
+﻿<Window x:Class="HelloWPF.PokeAPI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HelloWPF"
+        mc:Ignorable="d"
+        Title="PokeAPI" Height="450" Width="300">
+    <StackPanel Margin="10">
+        
+        <TextBlock FontSize="25" TextAlignment="Center" Margin="10">Pokédex do Conradito</TextBlock>
+
+        <Grid >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Name="btnTabPesquisa" Click="btnTabPesquisa_Click" Grid.Column="0" Background="#CCC" HorizontalAlignment="Center" >Pesquisa</Button>
+            <Button Name="btnTabListagem" Click="btnTabListagem_Click" Grid.Column="1" Background="#F1F2F3" HorizontalAlignment="Center" >Listagem</Button>
+        </Grid>
+
+        <StackPanel Name="panelPesquisa" Visibility="Visible">
+            
+            <TextBlock Margin="0,10,0,0" >Digite o nome de um Pokémon:</TextBlock>
+            <TextBox Name="txtNome" />
+            <Button Click="btnPesquisar_Click" Margin="0, 10" Name="btnPesquisar" >Pesquisar</Button>
+
+            <StackPanel Background="AliceBlue" Margin="10" Visibility="Collapsed" Name="panelPokemon">
+                <TextBlock Name="lblNome" FontWeight="Bold" FontSize="15" TextAlignment="Center" >Nome do Pokémon</TextBlock>
+                <Image Name="imgPokemon" Margin="10" Source="https://via.placeholder.com/100" Stretch="Fill" Width="100" />
+                <TextBlock>Poder principal: <Bold><Run Name="spanPoder"></Run></Bold> </TextBlock>
+                <Button Name="btnFechar" Click="btnFechar_Click" HorizontalAlignment="Center" Margin="10" >Fechar</Button>
+            </StackPanel>
+
+        </StackPanel>
+
+        <StackPanel Name="panelListagem" Visibility="Visible" >
+
+            <ItemsControl Name="listagem">
+                <ItemsControl.ItemTemplate  >
+                    <DataTemplate>
+
+                        <StackPanel Orientation="Horizontal" Tag="{Binding botao}" >
+                            <Image Source="{Binding imagem}" Width="75" Tag="cccc" />
+                            <TextBlock Text="{Binding nome}" Tag="bbbb" />
+                            <Button Tag="aosodsak" >Saiba mais</Button>
+                        </StackPanel>
+                    
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+            
+        </StackPanel>
+        
+    </StackPanel>
+</Window>

@@ -1,16 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
 namespace HelloWPF
 {
@@ -37,7 +25,7 @@ namespace HelloWPF
             string usuario = txtUsuario.Text;
             string senha = txtSenha.Password;
 
-            if( this.usuario != usuario)
+            if (this.usuario != usuario)
                 lblErroUsuario.Visibility = Visibility.Visible;
             //else
             //    lblErroUsuario.Visibility = Visibility.Collapsed;
@@ -46,18 +34,18 @@ namespace HelloWPF
             //else
             //    lblErroSenha.Visibility = Visibility.Collapsed;
 
-            if ( this.usuario == usuario && this.senha == senha)
+            if (this.usuario == usuario && this.senha == senha)
             {
                 panelLogin.Visibility = Visibility.Collapsed;
                 panelDashboard.Visibility = Visibility.Visible;
                 lblTitulo.Text = "Bem-vindo ao Dashboard";
 
-                if( lembrar == false)
+                if (lembrar == false)
                 {
                     txtUsuario.Clear();
                     txtSenha.Clear();
                 }
-                
+
                 lblErroUsuario.Visibility = Visibility.Collapsed;
                 lblErroSenha.Visibility = Visibility.Collapsed;
 

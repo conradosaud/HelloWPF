@@ -13,7 +13,7 @@
         
         <!-- Layout Grid para separar cada um em uma extremidade -->
         <!-- Dock="Top" para manter sempre no topo esse menu -->
-        <Grid DockPanel.Dock="Top" VerticalAlignment="Top" Background="Red" >
+        <Grid DockPanel.Dock="Top" VerticalAlignment="Top" Background="Blue" >
             
             <!-- Definição da GRID -->
             <Grid.ColumnDefinitions> <!-- 2 colunas (esquerda e direita) -->
