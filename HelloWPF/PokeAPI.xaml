@@ -36,14 +36,14 @@
 
         <StackPanel Name="panelListagem" Visibility="Visible" >
 
-            <ItemsControl Name="listagem">
+            <ItemsControl Name="listaPokemons">
                 <ItemsControl.ItemTemplate  >
                     <DataTemplate>
 
                         <StackPanel Orientation="Horizontal" Tag="{Binding botao}" >
-                            <Image Source="{Binding imagem}" Width="75" Tag="cccc" />
-                            <TextBlock Text="{Binding nome}" Tag="bbbb" />
-                            <Button Tag="aosodsak" >Saiba mais</Button>
+                            <Image Source="{Binding imagem}" Width="75" />
+                            <TextBlock Text="{Binding nome}" />
+                            <Button>Saiba mais</Button>
                         </StackPanel>
                     
                     </DataTemplate>

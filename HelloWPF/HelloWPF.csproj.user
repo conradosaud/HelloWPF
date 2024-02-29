@@ -24,6 +24,9 @@
     <Compile Update="Atividade03_Cadastro.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="AtividadeAPI01.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Bindings.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -48,6 +51,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Atividade03_Cadastro.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AtividadeAPI01.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Bindings.xaml">

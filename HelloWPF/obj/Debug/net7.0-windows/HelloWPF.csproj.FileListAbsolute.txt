@@ -44,3 +44,5 @@ C:\Users\conra\source\repos\HelloWPF\HelloWPF\obj\Debug\net7.0-windows\Atividade
 C:\Users\conra\source\repos\HelloWPF\HelloWPF\obj\Debug\net7.0-windows\Atividade03_Cadastro.baml
 C:\Users\conra\source\repos\HelloWPF\HelloWPF\obj\Debug\net7.0-windows\PokeAPI.g.cs
 C:\Users\conra\source\repos\HelloWPF\HelloWPF\obj\Debug\net7.0-windows\PokeAPI.baml
+C:\Users\conra\source\repos\HelloWPF\HelloWPF\obj\Debug\net7.0-windows\AtividadeAPI01.g.cs
+C:\Users\conra\source\repos\HelloWPF\HelloWPF\obj\Debug\net7.0-windows\AtividadeAPI01.baml

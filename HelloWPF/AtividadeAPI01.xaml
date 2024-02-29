@@ -1,0 +1,31 @@
+﻿<Window x:Class="HelloWPF.AtividadeAPI01"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HelloWPF"
+        mc:Ignorable="d"
+        Title="AtividadeAPI01" Height="450" Width="800">
+    <StackPanel>
+        <TextBlock Margin="10" FontSize="25" TextAlignment="Center">Dog API</TextBlock>
+        <TextBlock>Digite o nome de uma raça de cachorro:</TextBlock>
+        <TextBox Name="txtNome"/>
+        <Button Name="btnProcurar" Click="btnProcurar_Click" Margin="20">Procurar imagem</Button>
+
+        <Grid >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            
+            <Image VerticalAlignment="Top" Grid.Column="0" Name="imgCachorro1" Source="https://via.placeholder.com/200" Width="200" />
+            <Image VerticalAlignment="Top" Grid.Column="1" Name="imgCachorro2" Source="https://via.placeholder.com/200" Width="200" />
+            <Image VerticalAlignment="Top" Grid.Column="2" Name="imgCachorro3" Source="https://via.placeholder.com/200" Width="200" />
+            
+        </Grid>
+        
+        
+        
+    </StackPanel>
+</Window>

@@ -38,24 +38,6 @@ namespace HelloWPF
             //MostrarItens();
         }
 
-        async void MostrarItens()
-        {
-            string url_nova = "https://pokeapi.co/api/v2/pokemon?limit=10";
-            string url_img = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/";
-            HttpResponseMessage resposta = await client.GetAsync(url_nova); // faz a requisição
-            string conteudo = await resposta.Content.ReadAsStringAsync(); // pega o conteúdo
-            JsonDocument json = JsonDocument.Parse(conteudo); // transforma em json
-
-            List<object> lista = new List<object>();
-
-            JsonElement elementos = json.RootElement.GetProperty("results"); // busca dentro do json
-            for (int i = 0; i < elementos.GetArrayLength(); i++)
-            {
-                lista.Add(new { nome = elementos[i].GetProperty("name").GetString(), imagem = url_img+(i+1)+".gif", botao = "pokemon_"+ elementos[i].GetProperty("name").GetString() });
-            }
-            //listaDeNomes.ItemsSource = lista;
-        }
-
         async void ConsultaSimples()
         {
             HttpResponseMessage resposta = await client.GetAsync( url ); // faz a requisição
@@ -217,6 +199,31 @@ namespace HelloWPF
         {
             panelListagem.Visibility = Visibility.Visible;
             panelPesquisa.Visibility = Visibility.Collapsed;
+
+            MostrarItens();
+
         }
+
+        async void MostrarItens()
+        {
+            string url_nova = "https://pokeapi.co/api/v2/pokemon?limit=10";
+            string url_img = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/";
+            
+            HttpResponseMessage resposta = await client.GetAsync(url_nova);
+            string conteudo = await resposta.Content.ReadAsStringAsync();
+            JsonDocument json = JsonDocument.Parse(conteudo);
+
+            List<object> lista = new List<object>();
+
+            JsonElement elementos = json.RootElement.GetProperty("results"); // busca dentro do json
+            for (int i = 0; i < elementos.GetArrayLength(); i++)
+            {
+                lista.Add(new { nome = elementos[i].GetProperty("name").GetString(), imagem = url_img + (i + 1) + ".gif", botao = "pokemon_" + elementos[i].GetProperty("name").GetString() });
+            }
+            
+            listaPokemons.ItemsSource = lista;
+
+        }
+
     }
 }
