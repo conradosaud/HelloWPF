@@ -48,9 +48,9 @@ namespace HelloWPF
             string link2 = json.RootElement.GetProperty("message")[2].GetString();
             string link3 = json.RootElement.GetProperty("message")[3].GetString();
 
-            imgCachorro1.Source = new BitmapImage(new Uri(link1, UriKind.Absolute));
-            imgCachorro2.Source = new BitmapImage(new Uri(link2, UriKind.Absolute));
-            imgCachorro3.Source = new BitmapImage(new Uri(link3, UriKind.Absolute));
+            imgCachorro1.Source = new BitmapImage(new Uri(link1));
+            imgCachorro2.Source = new BitmapImage(new Uri(link2));
+            imgCachorro3.Source = new BitmapImage(new Uri(link3));
 
         }
     }
