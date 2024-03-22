@@ -46,3 +46,7 @@ C:\Users\conra\source\repos\HelloWPF\HelloWPF\obj\Debug\net7.0-windows\PokeAPI.g
 C:\Users\conra\source\repos\HelloWPF\HelloWPF\obj\Debug\net7.0-windows\PokeAPI.baml
 C:\Users\conra\source\repos\HelloWPF\HelloWPF\obj\Debug\net7.0-windows\AtividadeAPI01.g.cs
 C:\Users\conra\source\repos\HelloWPF\HelloWPF\obj\Debug\net7.0-windows\AtividadeAPI01.baml
+C:\Users\conra\source\repos\HelloWPF\HelloWPF\obj\Debug\net7.0-windows\SupabaseAPI.g.cs
+C:\Users\conra\source\repos\HelloWPF\HelloWPF\obj\Debug\net7.0-windows\SupabaseAPI.baml
+C:\Users\conra\source\repos\HelloWPF\HelloWPF\obj\Debug\net7.0-windows\SupabaseAPIVerTodos.g.cs
+C:\Users\conra\source\repos\HelloWPF\HelloWPF\obj\Debug\net7.0-windows\SupabaseAPIVerTodos.baml

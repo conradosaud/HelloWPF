@@ -1,0 +1,31 @@
+﻿<Window x:Class="HelloWPF.SupabaseAPI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HelloWPF"
+        mc:Ignorable="d"
+        Title="SupabaseAPI" Height="450" Width="400">
+    <StackPanel Margin="20">
+        
+        <TextBlock FontSize="20" TextAlignment="Center" Margin="0,10">API Supabase</TextBlock>
+        <TextBlock>Digite o ID a procurar:</TextBlock>
+        <TextBox Name="txtPesquisa" />
+        <Button Name="BtnPesquisar" Click="BtnPesquisar_Click" Margin="0,10" >Pesquisar</Button>
+        <Button Name="BtnTodos" Click="BtnTodos_Click"  Margin="0,10" >Ver todos</Button>
+
+        <StackPanel Background="#F0F0F0">
+            <TextBlock >ID: <Run Name="lblID">?</Run></TextBlock>
+            <TextBlock >Nome: <Run Name="lblNome">?</Run></TextBlock>
+            <TextBlock >Preço: <Run Name="lblPreco">?</Run></TextBlock>
+        </StackPanel>
+
+        <TextBlock FontSize="20" TextAlignment="Center" Margin="0,10">Cadastro</TextBlock>
+        <TextBlock>Nome:</TextBlock>
+        <TextBox Name="txtNome"/>
+        <TextBlock>Preço:</TextBlock>
+        <TextBox Name="txtPreco"/>
+        <Button Name="BtnSalvar" Click="BtnSalvar_Click" Margin="0,10" >Salvar</Button>
+
+    </StackPanel>
+</Window>

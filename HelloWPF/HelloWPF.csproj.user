@@ -42,6 +42,12 @@
     <Compile Update="PokeAPI.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="SupabaseAPI.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SupabaseAPIVerTodos.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Atividade02.xaml">
@@ -75,6 +81,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="PokeAPI.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SupabaseAPI.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SupabaseAPIVerTodos.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
